@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width-device-width, initial-scale=1.0">-->
+    <title>JavaScript Basic</title>
+    <!--Internal Script-->
+    <!--คำสั่งที่อยู่ใน script เปิดและ script ปิดมันจะทำงานเฉพาะไฟล์นี้เท่านั้น-->
+    <!--จึงไม่เหมาะสำหรับการเขียน Web ขนาดใหญ่ที่มีรูปแบบการเขียนที่ซับซ้อน-->
+    <script type="text/javaScript">
+       document.write("");
+       </script>
+
+    <!--External Script-->
+    <!--<script src="basic_Javascript.js"></script>-->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="lightMode">
+        
+        <!-- <div class="DataDetail">
+                <ul id="Menu">
+                    <li id="item-1">A</li>
+                    <li id="item-2">B</li>
+                    <li id="item-3">C</li>
+                    <li id="item-4">D</li>
+                </ul>
+        </div> -->
+ 
+        <div id="message" style="text-align: center;">
+            <p>JavaScript</p>
+        </div>
+    
+        <div class="selection">
+            <label for="">Select Tools</label>
+            <select name="" id="SelectMenu">
+                <option value="ASP.Net">ASP.Net</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select>
+            <p id="display"></p>
+        </div>
+
+        <br>
+        <div class="btnAction">
+            <div>
+                <label class="text-center">Name</label>
+                <input type="text" name="inputName" id="Name" placeholder="Your Name" onfocus="highlight(this)" onblur="unhightlight(this)">
+                <!-- <button onclick="Nameown(document.getElementById('Name').value);">Send</button> -->
+                <button onclick="Template(document.getElementById('Name').value)">Send</button>
+            </div>
+            <br>
+            <div>
+                <label class="text-center">Check Even or Odd Number:</label>
+                <input type="number" name="inputNumber" id="Inputs" placeholder="Input Number">
+                <button onclick="EvenOrOdd(document.getElementById('Inputs').value);">Send</button>
+            </div>
+            </br>
+            <button onclick="addItem()">Add</button>
+            <button onclick="RemoveItem()">Remove</button>
+            <button onclick="ReplaceItem()">ReplaceItem</button>
+            <!--<br><button class="btnCallback" id="callback-btn">Click Here</button></br>
+            <p id="callback-text">Callback button</p>-->
+            <!-- <button id="del" onclick="deleteData()">Delete</button> -->
+            <p id="delText">Delete All Data?</p>
+
+            <br>
+            <div>
+                <button onclick="addDarkMode()">Add Style</button>
+                <button onclick="removeDarkMode()">Remove Style</button>
+                <button onclick="SwapMode()">Swap Style</button>             
+            </div>
+            </br>
+
+            <br>
+            <div>
+                <button onclick="lightMode()">Light mode</button>
+                <button onclick="DarkMode()">Dark mode</button>
+            </div>
+            </br>
+        </div>
+        </br> 
+
+        <div class="Links">
+            <a href="" onmouseover="highlight(this)" onmouseout="unhightlight(this)">Google</a>
+            <a href="" id="Link_YouTube">Youtube</a>
+        </div>
+
+        <script src="basic_Javascript.js">
+            <!--Even Handle-->
+            let callbackBtn = document.querySelector('#callback-btn')
+            callbackBtn.addEventListener("click", function () { console.log("User has clicked on the button!") })
+        </script>
+    </div>
+</body>
+
+</html>
