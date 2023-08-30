@@ -409,32 +409,25 @@ Introduction("Jenarong", "Inkham", Template); */
 
 //#region JavaScript Object
 //let nameof-Object = {Property:value}
-let product = {
-  name: "mouse",
-  price: 1500,
-  color: "black",
-  category: "Computer",
-  size: "M",
-  displayProduct: function () {
+const nameProduct = "mouse";
+const price = 1500;
+const color =  "black"
+const category= "Computer"
+const size= "M"
+let product = {nameProduct,price,color,category,size,
+  displayProduct() {
     return (
-      "Name = " +
-      this.name +
-      " Price = " +
-      this.price +
-      " Category = " +
-      this.category
+      "Name = " + this.nameProduct +
+      " Price = " + this.price +
+      " Category = " + this.category
     );
   },
-  discount: function () {
-    return this.price - 250;
-  },
-  getColor: function () {
-    return this.color;
-  },
+  discount(){return this.price - 250;},
+  getColor(){return this.color;}
 };
 //call method
-//console.log(product.displayProduct);
-//document.write(product.discount()+' Bath')
+console.log(product.displayProduct());
+console.log(product.discount()+' Bath')
 //#endregion
 
 //#region confirm
@@ -544,12 +537,9 @@ function ReplaceItem(){
  */
 const message = document.getElementById('message');
 
-function addDarkMode(){
-  message.classList.add("Dark")
-}
-function removeDarkMode(){
-  message.classList.remove("Dark")
-}
+addDarkMode=()=>message.classList.add("Dark")
+removeDarkMode=()=>message.classList.remove("Dark")
+
 function SwapMode(){
   message.classList.toggle("Dark")
   status_class = message.classList.contains("Dark")
@@ -583,15 +573,11 @@ function highlight(obj){ //function highlight รับ object เข้าม�
 
 }
 
-function unhightlight(obj){
-  obj.style.background = "white";
-}
+unhightlight=(obj)=>obj.style.background = "white";
 
-function Template(name) {
-  return console.log("Hello, " + name + " Welcome to ThaiLand");
-}
+Template=(name)=> console.log("Hello, " + name + " Welcome to ThaiLand");
 
-function EvenOrOdd(Inputnumber = 10) {
+EvenOrOdd=(Inputnumber = 10)=> {
   //let Inputnumber;
   let outputResult = Inputnumber % 2 == 0 ? "Even Number" : "Odd Number";
   console.log(outputResult);
